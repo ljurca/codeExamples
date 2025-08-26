@@ -26,8 +26,13 @@ public class ArrayExample {
     }
 
     public static void createBankAccountArray() {
-        BankAccount[] accounts = {new BankAccount(300, "Smith"), new BankAccount(250, "Jones")};
-        // Note: BankAccount[] accounts = new BankAccount[2]; // does NOT create BankAccount objects; creates space for references that can point to BankAccount objects
+        // Creates new bank account objects, as well as array that holds two bank account objects
+        BankAccount[] accounts = {new BankAccount(300, "Smith"),
+                new BankAccount(250, "Jones")};
+
+        // Note: BankAccount[] accounts = new BankAccount[2]; // <- this does NOT create BankAccount objects;
+        // it only creates space for references that can point to BankAccount objects
+
         for (BankAccount account: accounts) {
             System.out.println(account);
         }

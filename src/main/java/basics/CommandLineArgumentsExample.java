@@ -8,6 +8,7 @@ public class CommandLineArgumentsExample {
             System.out.println("Not enough arguments");
             return;
         }
+        // Remember to parse ints when needed
         int x = Integer.parseInt(args[0]);
         int y = Integer.parseInt(args[1]);
         int sum = x + y;

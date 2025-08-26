@@ -1,7 +1,7 @@
 package basics;
 
 /** Bank Account class */
-public class BankAccount  {
+public class BankAccount implements Comparable<BankAccount>{
     // Instance variables:
     private double balance;
     private String owner;
@@ -55,4 +55,14 @@ public class BankAccount  {
    }
 
 
+    @Override
+    public int compareTo(BankAccount o) {
+        if (this.balance < o.balance)
+            return -1;
+        else
+            if (this.balance> o.balance)
+                return 1;
+            else
+                return 0;
+    }
 }
